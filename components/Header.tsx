@@ -365,7 +365,7 @@ const Header = ({ subtitle }: { subtitle: string }): React.ReactElement => {
                   <a
                     target="_blank"
                     rel="noreferrer"
-                    href="https://github.com/genemators/genemators"
+                    href="https://desktop.genemator.me"
                     className="w-full genemator-title flex items-center justify-center px-4 py-2 border border text-base leading-6 font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-black focus:outline-none focus:border-white focus:shadow-outline-white active:bg-white transition ease-in-out duration-150"
                   >
                     Desktop Station
