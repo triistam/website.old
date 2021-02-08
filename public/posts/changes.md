@@ -9,4 +9,3 @@ I wanna say is that, I changed my mind, and came into a final decision.
 - [ ] Ditch WIUT
 - [ ] Transfer to an IT University at Japan
 - [ ] Flew out to Japan
-
