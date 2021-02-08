@@ -28,7 +28,7 @@ const Footer = (props: { simple?: boolean }): React.ReactElement => (
       </div>
         <div className="px-5 py-2">
           <a
-            href="https://www.twitch.tv/genemators"
+            href="https://www.youtube.com/channel/UCuF2yVTeVW6vcwXobvXXvZg"
             className="text-base leading-6 text-white hover:text-gray-200"
           >
             Stream
