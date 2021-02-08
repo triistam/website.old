@@ -337,16 +337,16 @@ const Header = ({ subtitle }: { subtitle: string }): React.ReactElement => {
               <div className="py-6 px-5 space-y-6">
                 <div className="grid grid-cols-2 row-gap-4 col-gap-8">
                   <a
-                    href="https://chisel.uz/"
+                    href="https://github.com/chiseldevs/"
                     className="text-base leading-6 font-medium text-white hover:text-gray-300 transition ease-in-out duration-150"
                   >
                     Chisel Devs
                   </a>
                   <a
-                    href="https://deno.land/"
+                    href="https://xinux.uz/"
                     className="text-base leading-6 font-medium text-white hover:text-gray-300 transition ease-in-out duration-150"
                   >
-                    Denoland
+                    Xinux
                   </a>
                   <a
                     href="https://bsba.uz/"
