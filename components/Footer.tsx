@@ -78,7 +78,7 @@ const Footer = (props: { simple?: boolean }): React.ReactElement => (
       </div>
       <div className="mt-9 flex justify-center text-center">
         <a
-          href="https://github.com/genemators/genemators/blob/master/LICENSE"
+          href="https://github.com/genemators/website/blob/master/LICENSE"
           className="hover:underline"
         >
           V3 | MPL-2.0 Licensed | Copyright © 2017-2020 Genemator Sakhib
