@@ -20,10 +20,10 @@ const Footer = (props: { simple?: boolean }): React.ReactElement => (
           </a>
         </div><div className="px-5 py-2">
         <a
-          href="https://github.com/chiseldevs"
+          href="https://bsba.uz"
           className="text-base leading-6 text-white hover:text-gray-200"
         >
-          Chisel
+          BSBA
         </a>
       </div>
         <div className="px-5 py-2">
