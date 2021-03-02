@@ -20,7 +20,7 @@ const Footer = (props: { simple?: boolean }): React.ReactElement => (
           </a>
         </div><div className="px-5 py-2">
         <a
-          href="https://bsba.uz"
+          href="https://desktop.genemator.me"
           className="text-base leading-6 text-white hover:text-gray-200"
         >
           BSBA

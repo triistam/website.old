@@ -116,7 +116,7 @@ const Header = ({ subtitle }: { subtitle: string }): React.ReactElement => {
           </nav>
           <div className="hidden md:flex items-center justify-end space-x-8 md:flex-1 lg:w-0">
             <a
-              href="https://bsba.uz/"
+              href="https://desktop.genemator.me/"
               target="_blank"
               rel="noreferrer"
               className="whitespace-no-wrap genemator-title text-base leading-6 font-medium text-white hover:text-gray-200 focus:outline-none focus:text-gray-400"
@@ -349,7 +349,7 @@ const Header = ({ subtitle }: { subtitle: string }): React.ReactElement => {
                     Xinux
                   </a>
                   <a
-                    href="https://bsba.uz/"
+                    href="https://desktop.genemator.me/"
                     className="text-base leading-6 font-medium text-white hover:text-gray-300 transition ease-in-out duration-150"
                   >
                     BSBA™
@@ -365,7 +365,7 @@ const Header = ({ subtitle }: { subtitle: string }): React.ReactElement => {
                   <a
                     target="_blank"
                     rel="noreferrer"
-                    href="https://bsba.uz"
+                    href="https://desktop.genemator.me"
                     className="w-full genemator-title flex items-center justify-center px-4 py-2 border border text-base leading-6 font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-black focus:outline-none focus:border-white focus:shadow-outline-white active:bg-white transition ease-in-out duration-150"
                   >
                     Desktop Station
