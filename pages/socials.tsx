@@ -72,7 +72,7 @@ const Socials = (): React.ReactElement => {
             <div className="items-center justify-center">
               <a href="https://github.com/genemators" key="github">
                 <svg
-                  className="h-36 w-36 animated-social"
+                  className="h-36 w-36 animated-social s"
                   fill="none"
                   viewBox="0 0 50 50"
                   stroke="currentColor"
