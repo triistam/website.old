@@ -337,12 +337,6 @@ const Header = ({ subtitle }: { subtitle: string }): React.ReactElement => {
               <div className="py-6 px-5 space-y-6">
                 <div className="grid grid-cols-2 row-gap-4 col-gap-8">
                   <a
-                    href="https://github.com/chiseldevs/"
-                    className="text-base leading-6 font-medium text-white hover:text-gray-300 transition ease-in-out duration-150"
-                  >
-                    Chisel Devs
-                  </a>
-                  <a
                     href="https://xinux.uz/"
                     className="text-base leading-6 font-medium text-white hover:text-gray-300 transition ease-in-out duration-150"
                   >
@@ -353,12 +347,6 @@ const Header = ({ subtitle }: { subtitle: string }): React.ReactElement => {
                     className="text-base leading-6 font-medium text-white hover:text-gray-300 transition ease-in-out duration-150"
                   >
                     BSBA™
-                  </a>
-                  <a
-                    href="https://www.youtube.com/channel/UCLvAJjc5gvy_6QL2f-RRBuw"
-                    className="text-base leading-6 font-medium text-white hover:text-gray-300 transition ease-in-out duration-150"
-                  >
-                    iBlogs
                   </a>
                 </div>
                 <div className="space-y-6">

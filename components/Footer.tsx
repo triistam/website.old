@@ -18,28 +18,14 @@ const Footer = (props: { simple?: boolean }): React.ReactElement => (
           >
             Xinux
           </a>
-        </div><div className="px-5 py-2">
-        <a
-          href="https://desktop.genemator.me"
-          className="text-base leading-6 text-white hover:text-gray-200"
-        >
-          BSBA
-        </a>
-      </div>
-        <div className="px-5 py-2">
-          <a
-            href="https://www.youtube.com/channel/UCuF2yVTeVW6vcwXobvXXvZg"
-            className="text-base leading-6 text-white hover:text-gray-200"
-          >
-            Stream
-          </a>
         </div>
         <div className="px-5 py-2">
-          <Link href="/musics">
-            <a className="text-base leading-6 text-white hover:text-gray-200">
-              Music
-            </a>
-          </Link>
+          <a
+            href="https://desktop.genemator.me"
+            className="text-base leading-6 text-white hover:text-gray-200"
+          >
+            BSBA
+          </a>
         </div>
       </nav>
       <div className="mt-9 flex justify-center">
