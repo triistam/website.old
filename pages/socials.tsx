@@ -30,35 +30,6 @@ const Socials = (): React.ReactElement => {
           </div>
           <div className="mt-6 grid gap-16 lg:grid-cols-5  lg:row-gap-12 items-center text-center justify-center">
             <div className="items-center justify-center">
-              <a href="https://instagram.com/genemator" key="instagram">
-                <svg
-                  className="h-36 w-36 animated-social"
-                  fill="none"
-                  viewBox="0 0 50 50"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="1"
-                    d="M16,46h18c6.6,0,12-5.4,12-12V16c0-6.6-5.4-12-12-12H16C9.4,4,4,9.4,4,16v18C4,40.6,9.4,46,16,46z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="1"
-                    d="M25,15c-5.5,0-10,4.5-10,10s4.5,10,10,10s10-4.5,10-10S30.5,15,25,15z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="1"
-                    d="M37,11c-1.1,0-2,0.9-2,2s0.9,2,2,2s2-0.9,2-2S38.1,11,37,11z"
-                  />
-                </svg>
-              </a>
-            </div>
-            <div className="items-center justify-center">
               <a href="https://twitter.com/genemator" key="twitter">
                 <svg
                   className="h-36 w-36 animated-social"
