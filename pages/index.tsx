@@ -26,7 +26,7 @@ export default function Home(): React.ReactElement {
         <div className="flex justify-center items-center">
           <a
             className="flex justify-center items-center"
-            href="https://i.am.genemator.me"
+            href="https://i.am.genemator.uz"
           >
             <svg
               className="text-white xl:w-3/4 lg:w-3/4 sm:w-3/4 w-3/4"

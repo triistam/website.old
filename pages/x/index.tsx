@@ -42,7 +42,7 @@ const ThirdPartyRegistryList = (): React.ReactElement => {
           <div className="max-w-screen-lg mx-auto px-4 sm:px-6 md:px-8 pt-4">
             <div className="text-white mt-4 sm:mt-8 break-words">
               <p>
-                <span className="font-semibold">genemator.me/x</span> is a
+                <span className="font-semibold">genemator.uz/x</span> is a
                 project explorer that helps users to explore projects created or
                 contributed by <InlineCode>Genemator Sakhib</InlineCode>. Outer
                 projects like{" "}
