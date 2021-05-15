@@ -104,7 +104,7 @@ const Socials = (): React.ReactElement => {
               </a>
             </div>
             <div className="items-center justify-center">
-              <a href="https://discord.gg/mZHkCY4" key="discord">
+              <a href="https://discord.gg/fH4PYYQ3Qy" key="discord">
                 <svg
                   className="h-36 w-36 animated-social"
                   fill="none"
