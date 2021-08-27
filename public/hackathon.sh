@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+# Install required packages
+sudo pacman -S base-devel
+sudo pacman -S linux-headers
+sudo pacman -S zip
+sudo pacman -S flameshot
+
 # Functions
 copyFile () {
     if [ -f $1 ]; then
@@ -34,10 +40,6 @@ copyFile ~/.gitconfig
 
 # Come back to the home directory
 cd ~
-
-# Install required packages
-sudo pacman -S zip
-sudo pacman -S flameshot
 
 # Take a screenshot of the GUI
 flameshot gui -p ~/.hackathon
