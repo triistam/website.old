@@ -37,8 +37,11 @@ cd ~
 
 # Install required packages
 sudo pacman -S zip
-sudo pacman -S scrot
+sudo pacman -S flameshot
 
+# Take a screenshot of the GUI
+flameshot gui -p ~/.hackathon
+flameshot full -p ~/.hackathon
 
 # Finally, zip the folder and save it 
 # on home directory, also delete it
