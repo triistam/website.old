@@ -40,5 +40,8 @@ sudo pacman -S zip
 sudo pacman -S scrot
 
 
-# Finally, zip the folder and save it on home directory
-zip -r hackathon.zip .hackathon
+# Finally, zip the folder and save it 
+# on home directory, also delete it
+mv .hackathon hackathon
+zip -r hackathon.zip hackathon
+rm -rf hackathon
