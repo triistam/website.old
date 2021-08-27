@@ -32,6 +32,13 @@ copyFile ~/.zshrc
 copyFile ~/.vimrc
 copyFile ~/.gitconfig
 
+# Come back to the home directory
 cd ~
+
+# Install required packages
 sudo pacman -S zip
+sudo pacman -S scrot
+
+
+# Finally, zip the folder and save it on home directory
 zip -r hackathon.zip .hackathon
