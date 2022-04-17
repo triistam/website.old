@@ -28,11 +28,6 @@ export default function About(
             className="avatar h-auto sm:w-1/2 lg:1/2 xl:w-1/4 px-5 py-5"
             alt="Genemator's Logo"
           />
-          {/*<img*/}
-          {/*functions="/big_logo.png"*/}
-          {/*className="avatar h-auto sm:w-1/2 lg:1/2 xl:w-1/4 px-5 py-5"*/}
-          {/*alt="Genemator's Logo"*/}
-          {/*/>*/}
         </div>
         <div className="flex mb-4 justify-center mt-8">
           <div className="text-white text-center xl:text-6xl lg:text-5xl text-4xl border rounded hover:bg-white hover:text-black">
@@ -72,22 +67,22 @@ export default function About(
                 who is famous under the nickname{" "}
                 <span className="genemator-colorful">Genemator</span>. I’m glad
                 to see you visit my website. For the beginning, let me introduce
-                myself. I’m a Senior Full-Stack developer with more than 7 years
-                of experience. Although I professionally code using 7 different
-                programming languages as JavaScript, TypeScript, Java, Kotlin,
-                C, C++, Assembler, Python2, Python3. I mainly use C++ for its
-                total control and wide range of functions. That said, my
-                knowledge is not limited to coding. I am also a specialist in
-                creating 3D driven video and photo. Besides, I prefer Cinema 4D
-                as 3D engine and utilize Adobe Products for editing purposes. I
-                can also create different songs and music for my projects by
-                using special applications on a professional level. For the time
-                being, I am a second-year student at Westminster International
-                University in Tashkent. My nationality is{" "}
-                <span className="text-blue-500">Uz</span>
+                myself. I’m a Senior Full-Stack developer with more than{" "}
+                {new Date().getFullYear() - 2012} years of experience. Although
+                I professionally code using 7 different programming languages as
+                JavaScript, TypeScript, Java, Kotlin, C, C++, Assembler,
+                Python2, Python3. I mainly use C++ for its total control and
+                wide range of functions. That said, my knowledge is not limited
+                to coding. I am also a specialist in creating 3D driven video
+                and photo. Besides, I prefer Cinema 4D as 3D engine and utilize
+                Adobe Products for editing purposes. I can also create different
+                songs and music for my projects by using special applications on
+                a professional level. For the time being, I am a second-year
+                student at Westminster International University in Tashkent. My
+                nationality is <span className="text-blue-500">Uz</span>
                 <span className="text-red-500">b</span>
-                <span className="text-green-400">ek</span> and I’m only 19 years
-                old 😎
+                <span className="text-green-400">ek</span> and I’m only{" "}
+                {new Date().getFullYear() - 2001} years old 😎
               </p>
             </div>
           </div>
@@ -293,7 +288,7 @@ export default function About(
             </div>
             <div className="mt-4 flex-wrap">
               <div className="text-green-400">
-                {"¸,ø¤º°`°º¤ø,¸¸,ø¤º° genemator °º¤ø,¸¸,ø¤º°`°º¤ø,¸ $"}
+                {"> Genemator > 100% > ~ >"}
               </div>
               <div className=" items-center pl-2">
                 <Typewriter
@@ -306,43 +301,13 @@ export default function About(
                       .typeString("...")
                       .pauseFor(3000)
                       .deleteChars(3)
-                      .typeString("./goodbyeworld") //
-                      .pauseFor(1000)
-                      .pasteString(
-                        "<br>" + "Thank you for being with me all time! 💖",
-                        node
-                      )
-                      .pasteString(
-                        "<br>" +
-                          'Now, I want you to find "trying//cry4help" by funeral and sing with me! I\'ll be waiting for you next 10 seconds here... ಥ_ಥ',
-                        node
-                      )
-                      .pauseFor(1000)
-                      .pasteString("<br/>" + "Are you ready?", node)
-                      .pauseFor(1000)
-                      .pasteString("<br/>" + "1...", node)
-                      .pauseFor(1000)
-                      .pasteString(" 2...", node)
-                      .pauseFor(1000)
-                      .pasteString(" 3...", node)
-                      .pauseFor(1000)
-                      .deleteAll(1)
-                      .pasteString("<br/>" + "(#--------) 5%", node)
-                      .pauseFor(1000)
-                      .pasteString("<br/>" + "(###------) 26%", node)
-                      .pauseFor(1000)
-                      .pasteString("<br/>" + "(#####----) 52%", node)
-                      .pauseFor(1000)
-                      .pasteString("<br/>" + "(######---) 72%", node)
-                      .pauseFor(1000)
-                      .pasteString("<br/>" + "(#######--) 84%", node)
-                      .pauseFor(1000)
-                      .pasteString("<br/>" + "(########-) 99%", node)
-                      .pauseFor(1000)
-                      .pasteString("<br/>" + "Goodbye World! (┬┬﹏┬┬)", node)
-                      .pauseFor(5000)
-                      .typeString("  exit")
-                      .pasteString("<br/>" + "[Process completed]", node)
+                      .typeString("$ ./goodbyeworld")
+                      .pauseFor(3000)
+                      .deleteAll()
+                      .typeString("$ now I'm UwUssimo Robinson")
+                      .pauseFor(3000)
+                      .deleteAll()
+                      .typeString("$ Find me at https://uwussi.moe")
                       .start();
                   }}
                 />
