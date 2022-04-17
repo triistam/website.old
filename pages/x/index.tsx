@@ -49,8 +49,14 @@ const ThirdPartyRegistryList = (): React.ReactElement => {
                 <InlineCode>organisation based projects</InlineCode> are also
                 counted as Genemator's work.
               </p>
+              <br />
+              <p>
+                Warning! Genemator Gen 1.0 does not maintain this portfolio
+                anymore. Refer to new Genemator's or UwUssimo Robinson's
+                porftfolio.
+              </p>
             </div>
-            <div className="mt-12">
+            <div className="mt-6">
               <label htmlFor="query" className="font-medium sr-only">
                 Search...
               </label>

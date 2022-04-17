@@ -4,10 +4,7 @@ import React from "react";
 import Head from "next/head";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Notification from "../components/Notification";
 import Link from "next/link";
-
-import { news } from "../news.json";
 
 export default function Home(): React.ReactElement {
   return (
@@ -21,7 +18,6 @@ export default function Home(): React.ReactElement {
         />
       </Head>
       <Header subtitle="Home" />
-      <Notification news={news} />
       <div className="h-auto">
         <div className="flex justify-center items-center">
           <a
@@ -62,13 +58,13 @@ export default function Home(): React.ReactElement {
         </div>
         <div className="flex mb-4 justify-center">
           <div className="genemator-title px-3 text-white text-center xl:text-6xl lg:text-5xl all:text-5xl text-5xl border-4 rounded-lg">
-            Genemator Sakhib
+            Genemator Gen 1.0
           </div>
         </div>
         <div className="flex justify-center">
           <div className="text-white text-center xl:text-3xl lg:text-2xl text-1xl">
-            <a href="https://commits.top/uzbekistan.html">
-              Senior Developer from Uzbekistan's Top 1!
+            <a href="https://uwussi.moe">
+              Ex Senior Developer Top 1 and current "UwUssimo Robinson"
             </a>
           </div>
         </div>
