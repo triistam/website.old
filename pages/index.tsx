@@ -4,10 +4,7 @@ import React from "react";
 import Head from "next/head";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Notification from "../components/Notification";
 import Link from "next/link";
-
-import { news } from "../news.json";
 
 export default function Home(): React.ReactElement {
   return (
@@ -21,7 +18,6 @@ export default function Home(): React.ReactElement {
         />
       </Head>
       <Header subtitle="Home" />
-      <Notification news={news} />
       <div className="h-auto">
         <div className="flex justify-center items-center">
           <a
