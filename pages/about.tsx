@@ -287,9 +287,7 @@ export default function About(
               <div className="ml-2 h-3 w-3 bg-green-500 rounded-full" />
             </div>
             <div className="mt-4 flex-wrap">
-              <div className="text-green-400">
-                {"> Genemator > 100% > ~ >"}
-              </div>
+              <div className="text-green-400">{"> Genemator > 100% > ~ >"}</div>
               <div className=" items-center pl-2">
                 <Typewriter
                   options={{

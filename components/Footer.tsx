@@ -56,7 +56,8 @@ const Footer = (props: { simple?: boolean }): React.ReactElement => (
           href="https://github.com/genemators/website/blob/master/LICENSE"
           className="hover:underline"
         >
-          V3 | MPL-2.0 Licensed | Copyright © 2017-{new Date().getFullYear()} Genemator Sakhib
+          V3 | MPL-2.0 Licensed | Copyright © 2017-{new Date().getFullYear()}{" "}
+          Genemator Sakhib
         </a>
       </div>
     </div>
