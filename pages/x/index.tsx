@@ -8,7 +8,6 @@ import { entries } from "../../util/registry_utils";
 import InlineCode from "../../components/InlineCode";
 
 import Head from "next/head";
-import Error from "next/error";
 
 const ThirdPartyRegistryList = (): React.ReactElement => {
   const [query, setQuery] = React.useState("");

@@ -6,10 +6,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Typewriter from "typewriter-effect";
 
-export default function About(
-  string: string,
-  node: HTMLElement | null
-): React.ReactElement {
+export default function About(): React.ReactElement {
   return (
     <>
       <Head>
