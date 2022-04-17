@@ -68,7 +68,7 @@ export default function Home(): React.ReactElement {
         <div className="flex justify-center">
           <div className="text-white text-center xl:text-3xl lg:text-2xl text-1xl">
             <a href="https://uwussi.moe">
-              Ex Senior Developer Top 1 and current UwUssimo Robinson
+              Ex Senior Developer Top 1 and current "UwUssimo Robinson"
             </a>
           </div>
         </div>
