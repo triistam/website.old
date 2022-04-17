@@ -27,7 +27,7 @@ export default class GenoWebsiteApp extends App {
         <Head>
           <meta
             property="og:image"
-            content="https://genemator.uz/preview.png"
+            content="https://old.genemator.uz/preview.png"
           />
           <meta property="og:site_name" content="Genemator's" />
           <title>Genemator's Portfolio Website</title>
