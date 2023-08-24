@@ -34,8 +34,8 @@ function FileDisplay(props: {
             {props.canonicalPath === location.pathname ? (
               filename
             ) : (
-              <Link href={props.canonicalPath}>
-                <Link className="link text-white">{filename}</Link>
+              <Link href={props.canonicalPath} className="link text-white">
+                {filename}
               </Link>
             )}
           </span>
