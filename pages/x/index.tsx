@@ -1,11 +1,11 @@
 /* Copyright 2020 Genemator Sakhib. All rights reserved. MPL-2.0 license. */
 
-import React, { useMemo } from "react";
 import Link from "next/link";
-import Header from "../../components/Header";
+import React, { useMemo } from "react";
 import Footer from "../../components/Footer";
-import { entries } from "../../util/registry_utils";
+import Header from "../../components/Header";
 import InlineCode from "../../components/InlineCode";
+import { entries } from "../../util/registry_utils";
 
 import Head from "next/head";
 
@@ -83,7 +83,7 @@ const ThirdPartyRegistryList = (): React.ReactElement => {
                     return (
                       <li className={i !== 0 ? "border-t" : ""} key={i}>
                         <Link href="/x/[identifier]" as={link}>
-                          <a className="block hover:bg-white hover:text-black focus:outline-none focus:bg-white transition duration-150 ease-in-out">
+                          <Link className="block hover:bg-white hover:text-black focus:outline-none focus:bg-white transition duration-150 ease-in-out">
                             <div className="flex items-center px-4 sm:px-6 py-2">
                               <div className="min-w-0 flex-1 flex items-center">
                                 <div className="min-w-0 flex-1">
@@ -113,7 +113,7 @@ const ThirdPartyRegistryList = (): React.ReactElement => {
                                 </svg>
                               </div>
                             </div>
-                          </a>
+                          </Link>
                         </Link>
                       </li>
                     );

@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { useRouter } from "next/router";
-import Transition from "./Transition";
 import React, { useState } from "react";
+import Transition from "./Transition";
 
 const Header = ({ subtitle }: { subtitle: string }): React.ReactElement => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,9 +14,9 @@ const Header = ({ subtitle }: { subtitle: string }): React.ReactElement => {
     if (path !== "/") {
       return (
         <Link href="/">
-          <a className="text-base leading-6 font-medium text-white hover:text-gray-200 focus:outline-none focus:text-gray-400 transition ease-in-out duration-150">
+          <Link className="text-base leading-6 font-medium text-white hover:text-gray-200 focus:outline-none focus:text-gray-400 transition ease-in-out duration-150">
             Home
-          </a>
+          </Link>
         </Link>
       );
     }
@@ -26,7 +26,7 @@ const Header = ({ subtitle }: { subtitle: string }): React.ReactElement => {
     if (path !== "/") {
       return (
         <Link href="/">
-          <a className="-m-3 p-3 flex items-center space-x-3 rounded-md text-white hover:bg-white hover:text-black transition ease-in-out duration-150">
+          <Link className="-m-3 p-3 flex items-center space-x-3 rounded-md text-white hover:bg-white hover:text-black transition ease-in-out duration-150">
             <svg
               className="flex-shrink-0 h-6 w-6"
               fill="none"
@@ -41,7 +41,7 @@ const Header = ({ subtitle }: { subtitle: string }): React.ReactElement => {
               />
             </svg>
             <div className="text-base leading-6 font-medium">Home</div>
-          </a>
+          </Link>
         </Link>
       );
     }
@@ -53,7 +53,7 @@ const Header = ({ subtitle }: { subtitle: string }): React.ReactElement => {
         <div className="flex justify-between items-center border-b border-gray-100 py-6 md:justify-start md:space-x-10">
           <div className="lg:w-0 lg:flex-1">
             <Link href="/">
-              <a className="flex items-center">
+              <Link className="flex items-center">
                 <div className="text-white px-2 genemator-title">
                   Genemator's
                 </div>
@@ -62,7 +62,7 @@ const Header = ({ subtitle }: { subtitle: string }): React.ReactElement => {
                     {">"} {subtitle}
                   </div>
                 )}
-              </a>
+              </Link>
             </Link>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
@@ -89,33 +89,33 @@ const Header = ({ subtitle }: { subtitle: string }): React.ReactElement => {
           <nav className="hidden md:flex space-x-10">
             {homeDetectMenu()}
             <Link href="/posts">
-              <a className="text-base leading-6 font-medium text-white hover:text-gray-200 focus:outline-none focus:text-gray-400 transition ease-in-out duration-150">
+              <Link className="text-base leading-6 font-medium text-white hover:text-gray-200 focus:outline-none focus:text-gray-400 transition ease-in-out duration-150">
                 Posts
-              </a>
+              </Link>
             </Link>
             <Link href="/about">
-              <a className="text-base leading-6 font-medium text-white hover:text-gray-200 focus:outline-none focus:text-gray-400 transition ease-in-out duration-150">
+              <Link className="text-base leading-6 font-medium text-white hover:text-gray-200 focus:outline-none focus:text-gray-400 transition ease-in-out duration-150">
                 About
-              </a>
+              </Link>
             </Link>
             <Link href="/quotes">
-              <a className="text-base leading-6 font-medium text-white hover:text-gray-200 focus:outline-none focus:text-gray-400 transition ease-in-out duration-150">
+              <Link className="text-base leading-6 font-medium text-white hover:text-gray-200 focus:outline-none focus:text-gray-400 transition ease-in-out duration-150">
                 Quotes
-              </a>
+              </Link>
             </Link>
             <Link href="/x">
-              <a className="text-base leading-6 font-medium text-white hover:text-gray-200 focus:outline-none focus:text-gray-400 transition ease-in-out duration-150">
+              <Link className="text-base leading-6 font-medium text-white hover:text-gray-200 focus:outline-none focus:text-gray-400 transition ease-in-out duration-150">
                 eXplorer
-              </a>
+              </Link>
             </Link>
             <Link href="/socials">
-              <a className="text-base leading-6 font-medium text-white hover:text-gray-200 focus:outline-none focus:text-gray-400 transition ease-in-out duration-150">
+              <Link className="text-base leading-6 font-medium text-white hover:text-gray-200 focus:outline-none focus:text-gray-400 transition ease-in-out duration-150">
                 Socials
-              </a>
+              </Link>
             </Link>
           </nav>
           <div className="hidden md:flex items-center justify-end space-x-8 md:flex-1 lg:w-0">
-            <a
+            <Link
               href="https://desktop.genemator.uz/"
               target="_blank"
               rel="noreferrer"
@@ -134,7 +134,7 @@ const Header = ({ subtitle }: { subtitle: string }): React.ReactElement => {
                   d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"
                 />
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -188,7 +188,7 @@ const Header = ({ subtitle }: { subtitle: string }): React.ReactElement => {
                   <nav className="grid row-gap-8">
                     {homeDetectResponsive()}
                     <Link href="/posts">
-                      <a className="-m-3 p-3 flex items-center space-x-3 rounded-md text-white hover:bg-white hover:text-black transition ease-in-out duration-150">
+                      <Link className="-m-3 p-3 flex items-center space-x-3 rounded-md text-white hover:bg-white hover:text-black transition ease-in-out duration-150">
                         <svg
                           className="flex-shrink-0 h-6 w-6"
                           fill="none"
@@ -211,10 +211,10 @@ const Header = ({ subtitle }: { subtitle: string }): React.ReactElement => {
                         <div className="text-base leading-6 font-medium">
                           Posts
                         </div>
-                      </a>
+                      </Link>
                     </Link>
                     <Link href="/about">
-                      <a className="-m-3 p-3 flex items-center space-x-3 rounded-md text-white hover:bg-white hover:text-black transition ease-in-out duration-150">
+                      <Link className="-m-3 p-3 flex items-center space-x-3 rounded-md text-white hover:bg-white hover:text-black transition ease-in-out duration-150">
                         <svg
                           className="flex-shrink-0 h-6 w-6"
                           fill="none"
@@ -251,10 +251,10 @@ const Header = ({ subtitle }: { subtitle: string }): React.ReactElement => {
                         <div className="text-base leading-6 font-medium">
                           About
                         </div>
-                      </a>
+                      </Link>
                     </Link>
                     <Link href="/quotes">
-                      <a className="-m-3 p-3 flex items-center space-x-3 rounded-md text-white hover:bg-white hover:text-black transition ease-in-out duration-150">
+                      <Link className="-m-3 p-3 flex items-center space-x-3 rounded-md text-white hover:bg-white hover:text-black transition ease-in-out duration-150">
                         <svg
                           className="flex-shrink-0 h-6 w-6"
                           fill="none"
@@ -289,10 +289,10 @@ const Header = ({ subtitle }: { subtitle: string }): React.ReactElement => {
                         <div className="text-base leading-6 font-medium">
                           Quotes
                         </div>
-                      </a>
+                      </Link>
                     </Link>
                     <Link href="/x">
-                      <a className="-m-3 p-3 flex items-center space-x-3 rounded-md text-white hover:bg-white hover:text-black transition ease-in-out duration-150">
+                      <Link className="-m-3 p-3 flex items-center space-x-3 rounded-md text-white hover:bg-white hover:text-black transition ease-in-out duration-150">
                         <svg
                           className="flex-shrink-0 h-6 w-6"
                           fill="none"
@@ -309,10 +309,10 @@ const Header = ({ subtitle }: { subtitle: string }): React.ReactElement => {
                         <div className="text-base leading-6 font-medium">
                           eXplorer
                         </div>
-                      </a>
+                      </Link>
                     </Link>
                     <Link href="/socials">
-                      <a className="-m-3 p-3 flex items-center space-x-3 rounded-md text-white hover:bg-white hover:text-black transition ease-in-out duration-150">
+                      <Link className="-m-3 p-3 flex items-center space-x-3 rounded-md text-white hover:bg-white hover:text-black transition ease-in-out duration-150">
                         <svg
                           className="flex-shrink-0 h-6 w-6"
                           fill="none"
@@ -329,44 +329,44 @@ const Header = ({ subtitle }: { subtitle: string }): React.ReactElement => {
                         <div className="text-base leading-6 font-medium">
                           Socials
                         </div>
-                      </a>
+                      </Link>
                     </Link>
                   </nav>
                 </div>
               </div>
               <div className="py-6 px-5 space-y-6">
                 <div className="grid grid-cols-2 row-gap-4 col-gap-8">
-                  <a
+                  <Link
                     href="https://xinux.uz/"
                     className="text-base leading-6 font-medium text-white hover:text-gray-300 transition ease-in-out duration-150"
                   >
                     Xinux
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="https://desktop.genemator.uz/"
                     className="text-base leading-6 font-medium text-white hover:text-gray-300 transition ease-in-out duration-150"
                   >
                     BSBA™
-                  </a>
+                  </Link>
                 </div>
                 <div className="space-y-6">
-                  <a
+                  <Link
                     target="_blank"
                     rel="noreferrer"
                     href="https://desktop.genemator.uz"
                     className="w-full genemator-title flex items-center justify-center px-4 py-2 border border text-base leading-6 font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-black focus:outline-none focus:border-white focus:shadow-outline-white active:bg-white transition ease-in-out duration-150"
                   >
                     Desktop Station
-                  </a>
+                  </Link>
                   <span className="w-full flex rounded-md shadow-sm" />
                   <p className="text-center text-base leading-6 font-medium text-white">
                     Proudly crafted with{" "}
-                    <a
+                    <Link
                       href="https://vercel.com"
                       className="text-gray-400 hover:text-gray-700 transition ease-in-out duration-150"
                     >
                       Vercel / Next.js
-                    </a>
+                    </Link>
                   </p>
                 </div>
               </div>

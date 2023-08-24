@@ -1,15 +1,15 @@
 /* Copyright 2020 Genemator Sakhib. All rights reserved. MPL-2.0 license. */
 
-import React from "react";
 import Head from "next/head";
+import React from "react";
 
+import { promises as fs } from "fs";
+import Link from "next/link";
+import { GetStaticPaths, GetStaticProps } from "next/types";
+import { join } from "path";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Markdown from "../../components/Markdown";
-import { GetStaticProps, GetStaticPaths } from "next/types";
-import { promises as fs } from "fs";
-import { join } from "path";
-import Link from "next/link";
 
 interface Props {
   markdown: string;
@@ -61,7 +61,7 @@ const NewsPostPage = (props: Props): React.ReactElement => {
       </div>
       <div className="max-w-screen-md mx-auto px-4 sm:px-6 md:px-8 py-8 mb-16">
         <Link href="/posts">
-          <a className="link">&lt;- Back to overview</a>
+          <Link className="link">&lt;- Back to overview</Link>
         </Link>
 
         <h1 className="telegram-title tracking-tight font-bold text-5xl leading-10 mt-4 py-8">
@@ -81,11 +81,11 @@ const NewsPostPage = (props: Props): React.ReactElement => {
             baseURL={props.markdown}
           />
         </div>
-        <a href="tg://resolve?domain=genemators">
+        <Link href="tg://resolve?domain=genemators">
           <div className="mt-4 text-center border rounded hover:text-black hover:bg-white">
             Channel
           </div>
-        </a>
+        </Link>
       </div>
       <Footer />
     </>

@@ -1,10 +1,10 @@
 /* Copyright 2020 Genemator Sakhib. All rights reserved. MPL-2.0 license. */
 
-import React from "react";
 import Head from "next/head";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import Link from "next/link";
+import React from "react";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 export default function Home(): React.ReactElement {
   return (
@@ -20,7 +20,7 @@ export default function Home(): React.ReactElement {
       <Header subtitle="Home" />
       <div className="h-auto">
         <div className="flex justify-center items-center">
-          <a
+          <Link
             className="flex justify-center items-center"
             href="https://i.am.genemator.uz"
           >
@@ -54,7 +54,7 @@ export default function Home(): React.ReactElement {
                 transform="matrix(0.866, -0.5, 0.5, 0.866, 80, 80)"
               />
             </svg>
-          </a>
+          </Link>
         </div>
         <div className="flex mb-4 justify-center">
           <div className="genemator-title px-3 text-white text-center xl:text-6xl lg:text-5xl all:text-5xl text-5xl border-4 rounded-lg">
@@ -63,9 +63,9 @@ export default function Home(): React.ReactElement {
         </div>
         <div className="flex justify-center">
           <div className="text-white text-center xl:text-3xl lg:text-2xl text-1xl">
-            <a href="https://uwussi.moe">
+            <Link href="https://uwussi.moe">
               Ex Senior Developer Top 1 and current "UwUssimo Robinson"
-            </a>
+            </Link>
           </div>
         </div>
         <div className="flex wrap mb-4 mt-4 justify-center mb-32">

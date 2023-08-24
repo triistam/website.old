@@ -1,10 +1,10 @@
 /* Copyright 2020 Genemator Sakhib. All rights reserved. MPL-2.0 license. */
 
+import Link from "next/link";
 import React from "react";
+import { fileTypeFromURL, isReadme } from "../util/registry_utils";
 import { RawCodeBlock } from "./CodeBlock";
 import Markdown from "./Markdown";
-import Link from "next/link";
-import { fileTypeFromURL, isReadme } from "../util/registry_utils";
 
 function FileDisplay(props: {
   raw?: string;
@@ -35,21 +35,21 @@ function FileDisplay(props: {
               filename
             ) : (
               <Link href={props.canonicalPath}>
-                <a className="link text-white">{filename}</a>
+                <Link className="link text-white">{filename}</Link>
               </Link>
             )}
           </span>
         </div>
         <div>
           {props.sourceURL && (
-            <a href={props.sourceURL} className="link ml-4 text-white">
+            <Link href={props.sourceURL} className="link ml-4 text-white">
               Source
-            </a>
+            </Link>
           )}
           {props.repositoryURL && (
-            <a href={props.repositoryURL} className="link ml-4 text-white">
+            <Link href={props.repositoryURL} className="link ml-4 text-white">
               Repository
-            </a>
+            </Link>
           )}
         </div>
       </div>

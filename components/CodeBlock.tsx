@@ -1,10 +1,10 @@
 /* Copyright 2020 Genemator Sakhib. All rights reserved. MPL-2.0 license. */
 
-import React, { useEffect, useState } from "react";
+import Link from "next/link";
 import Router from "next/router";
 import Highlight, { Prism } from "prism-react-renderer";
 import light from "prism-react-renderer/themes/ultramin";
-import { useLayoutEffect } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 
 (typeof global !== "undefined" ? global : (window as any)).Prism = Prism;
 
@@ -116,9 +116,9 @@ export const RawCodeBlock = ({
                 line[0]?.empty && i === tokens.length - 1 ? null : (
                   <div key={i + "l"} className={codeDivClassNames}>
                     {enableLineRef ? (
-                      <a id={`L${i + 1}`} href={`#L${i + 1}`}>
+                      <Link id={`L${i + 1}`} href={`#L${i + 1}`}>
                         {i + 1}{" "}
-                      </a>
+                      </Link>
                     ) : (
                       i + 1
                     )}

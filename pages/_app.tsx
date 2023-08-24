@@ -1,12 +1,12 @@
-import React from "react";
 import App from "next/app";
-import Router from "next/router";
 import Head from "next/head";
+import Link from "next/link";
+import Router from "next/router";
 import NProgress from "nprogress";
-import "../components/app.css";
-import "../components/markdown.css";
-import "../components/ngprogress.css";
-import "preact/debug";
+import React from "react";
+// import "../components/app.css";
+// import "../components/markdown.css";
+// import "../components/ngprogress.css";
 
 NProgress.configure({
   showSpinner: false,
@@ -38,12 +38,12 @@ export default class GenoWebsiteApp extends App {
             <div className="pr-16 sm:text-center sm:px-16">
               <p className="font-medium text-black">
                 <span className="block sm:ml-2 sm:inline-block font-bold">
-                  <a
+                  <Link
                     href="https://uwussi.moe"
                     className="text-black underline select-none"
                   >
                     Hey, now I'm UwUssimo Robinson &rarr;
-                  </a>
+                  </Link>
                 </span>
               </p>
             </div>

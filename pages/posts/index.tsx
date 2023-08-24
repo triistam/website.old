@@ -1,15 +1,15 @@
 /* Copyright 2020 Genemator Sakhib. All rights reserved. MPL-2.0 license. */
 
-import React from "react";
 import Head from "next/head";
 import { GetStaticProps } from "next/types";
+import React from "react";
 
 import { promises } from "fs";
 
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
-import { join } from "path";
 import Link from "next/link";
+import { join } from "path";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
 
 interface PostMeta {
   id: string;
@@ -71,20 +71,20 @@ const PostsIndexPage = (props: Props): React.ReactElement => {
                     </time>
                   </p>
                   <Link href={"/posts/[post]"} as={`/posts/${post.id}`}>
-                    <a className="block">
+                    <Link className="block">
                       <h3 className="mt-2 text-xl leading-7 font-semibold text-white">
                         {post.title}
                       </h3>
                       <p className="mt-3 text-base leading-6 text-gray-300">
                         {post.snippet}
                       </p>
-                    </a>
+                    </Link>
                   </Link>
                   <div className="mt-3">
                     <Link href={"/posts/[post]"} as={`/posts/${post.id}`}>
-                      <a className="read-post text-base leading-6 font-semibold transition ease-in-out duration-150">
+                      <Link className="read-post text-base leading-6 font-semibold transition ease-in-out duration-150">
                         Read post
-                      </a>
+                      </Link>
                     </Link>
                   </div>
                 </div>

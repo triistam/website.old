@@ -1,14 +1,14 @@
 /* Copyright 2020 Genemator Sakhib. All rights reserved. MPL-2.0 license. */
 
-import React, { useMemo, useState, useEffect } from "react";
-import { useRouter } from "next/router";
-import Link from "next/link";
 import Head from "next/head";
-import { parseNameVersion, isReadme, findEntry } from "../util/registry_utils";
-import Header from "./Header";
-import Footer from "./Footer";
-import FileDisplay from "./FileDisplay";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import React, { useEffect, useMemo, useState } from "react";
 import { DirEntry } from "../util/registries";
+import { findEntry, isReadme, parseNameVersion } from "../util/registry_utils";
+import FileDisplay from "./FileDisplay";
+import Footer from "./Footer";
+import Header from "./Header";
 
 class RegistryError {
   constructor(public message: string) {}
@@ -307,13 +307,13 @@ function Breadcrumbs({
   return (
     <p className="text-white pt-2 pb-4">
       <Link href="/">
-        <a className="link">genemator.uz</a>
+        <Link className="link">genemator.uz</Link>
       </Link>{" "}
       /{" "}
       {!isStd && (
         <>
           <Link href="/x">
-            <a className="link">x</a>
+            <Link className="link">x</Link>
           </Link>{" "}
           /{" "}
         </>
@@ -322,10 +322,10 @@ function Breadcrumbs({
         href={(!isStd ? "/x" : "") + "/[identifier]"}
         as={`${!isStd ? "/x" : ""}/${name}${version ? `@${version}` : ""}`}
       >
-        <a className="link">
+        <Link className="link">
           {name}
           {version ? `@${version}` : ""}
-        </a>
+        </Link>
       </Link>
       {path &&
         path.length > 0 &&
@@ -341,7 +341,7 @@ function Breadcrumbs({
                   version ? `@${version}` : ""
                 }${link ? `/${link}` : ""}`}
               >
-                <a className="link">{p}</a>
+                <Link className="link">{p}</Link>
               </Link>
             </React.Fragment>
           );
@@ -423,9 +423,9 @@ function DirectoryListing(props: {
               <span className="ml-2 font-medium">{props.path || "/"}</span>
             </div>
             {props.repositoryURL && (
-              <a href={props.repositoryURL} className="link ml-4">
+              <Link href={props.repositoryURL} className="link ml-4">
                 Repository
-              </a>
+              </Link>
             )}
           </div>
           <div>

@@ -71,9 +71,9 @@ function Markdown(props: MarkdownProps): React.ReactElement | null {
           const slug = slugify(text);
           return `
           <h${level}>
-            <a name="${slug}" class="anchor" href="#${slug}">
+            <Link name="${slug}" class="anchor" href="#${slug}">
               <span class="octicon-link"/>
-            </a>
+            </Link>
             ${text}
           </h${level}>`;
         },
@@ -81,9 +81,9 @@ function Markdown(props: MarkdownProps): React.ReactElement | null {
           const url = href
             ? transformLinkUri(props.displayURL, props.baseURL)(href)
             : "";
-          return `<a ${url ? `href="${url}"` : ""} ${
+          return `<Link ${url ? `href="${url}"` : ""} ${
             title ? `title="${title}"` : ""
-          }>${text}</a>`;
+          }>${text}</Link>`;
         },
         image(href, title, text) {
           const url = href ? transformImageUri(props.sourceURL)(href) : "";

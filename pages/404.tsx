@@ -1,10 +1,11 @@
 /* Copyright 2020 Genemator Sakhib. All rights reserved. MPL-2.0 license. */
 
 import Head from "next/head";
-import React from "react";
+import Link from "next/link";
 import Router from "next/router";
-import Header from "../components/Header";
+import React from "react";
 import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 export default function Custom404(): React.ReactElement {
   return (
@@ -31,12 +32,13 @@ export default function Custom404(): React.ReactElement {
           </div>
         </div>
         <div className="flex mb-4 justify-center mb-64">
-          <a
+          <Link
             onClick={() => Router.back()}
+            href=""
             className="text-white text-center xl:text-3xl lg:text-2xl text-1xl hover:underline cursor-pointer"
           >
             {"<-"} Go back to hell 🖤
-          </a>
+          </Link>
         </div>
       </div>
       <Footer />
