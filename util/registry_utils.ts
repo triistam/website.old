@@ -7,7 +7,7 @@ import { NPMEntry, NPMDatabaseEntry } from "./registries/npm";
 import { Entry, DatabaseEntry } from "./registries";
 
 function findDatabaseEntry(
-  name: string
+  name: string,
 ): GithubDatabaseEntry | URLDatabaseEntry | NPMDatabaseEntry | undefined {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
@@ -29,7 +29,7 @@ export function findEntry(name: string): Entry | null {
 }
 
 export function parseNameVersion(
-  nameVersion: string
+  nameVersion: string,
 ): [string, string | undefined] {
   const [name, version] = nameVersion.split("@", 2);
   return [name, version];

@@ -15,37 +15,37 @@ const testEntry = new URLEntry(testDbEntry);
 
 test("source url", () => {
   expect(testEntry.getSourceURL("/index.js", "v1.0.0")).toEqual(
-    "https://example.com/my_package@v1.0.0/index.js"
+    "https://example.com/my_package@v1.0.0/index.js",
   );
 });
 
 test("source url with default version", () => {
   expect(testEntry.getSourceURL("/index.js", undefined)).toEqual(
-    "https://example.com/my_package@latest/index.js"
+    "https://example.com/my_package@latest/index.js",
   );
 });
 
 test("source url with empty path", () => {
   expect(testEntry.getSourceURL("", "v1.0.0")).toEqual(
-    "https://example.com/my_package@v1.0.0"
+    "https://example.com/my_package@v1.0.0",
   );
 });
 
 test("repo url", () => {
   expect(testEntry.getRepositoryURL("/index.js", "v1.0.0")).toEqual(
-    "https://repos.example.com/my_package@v1.0.0/index.js"
+    "https://repos.example.com/my_package@v1.0.0/index.js",
   );
 });
 
 test("repo url default version", () => {
   expect(testEntry.getRepositoryURL("/index.js", undefined)).toEqual(
-    "https://repos.example.com/my_package@latest/index.js"
+    "https://repos.example.com/my_package@latest/index.js",
   );
 });
 
 test("repo url with empty path", () => {
   expect(testEntry.getRepositoryURL("", "v1.0.0")).toEqual(
-    "https://repos.example.com/my_package@v1.0.0"
+    "https://repos.example.com/my_package@v1.0.0",
   );
 });
 

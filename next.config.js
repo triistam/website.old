@@ -1,29 +1,26 @@
 const withPrefresh = require("@prefresh/next");
 
 module.exports = withPrefresh({
-  experimental: {
-    modern: true,
-    polyfillsOptimization: true,
-    redirects() {
-      return [
-        {
-          source: "/manual.html",
-          destination: "/manual",
-          permanent: true,
-        },
-        {
-          source: "/benchmarks.html",
-          destination: "/benchmarks",
-          permanent: true,
-        },
-      ];
-    },
+  redirects() {
+    return [
+      {
+        source: "/manual.html",
+        destination: "/manual",
+        permanent: true,
+      },
+      {
+        source: "/benchmarks.html",
+        destination: "/benchmarks",
+        permanent: true,
+      },
+    ];
   },
   webpack(config, { dev, isServer }) {
     const splitChunks = config.optimization && config.optimization.splitChunks;
     if (splitChunks) {
       const cacheGroups = splitChunks.cacheGroups;
-      const preactModules = /[\\/]node_modules[\\/](preact|preact-render-to-string|preact-context-provider)[\\/]/;
+      const preactModules =
+        /[\\/]node_modules[\\/](preact|preact-render-to-string|preact-context-provider)[\\/]/;
       if (cacheGroups.framework) {
         cacheGroups.preact = Object.assign({}, cacheGroups.framework, {
           test: preactModules,
@@ -44,7 +41,7 @@ module.exports = withPrefresh({
       config.entry = () =>
         entry().then((entries) => {
           entries["main.js"] = ["preact/debug"].concat(
-            entries["main.js"] || []
+            entries["main.js"] || [],
           );
           return entries;
         });

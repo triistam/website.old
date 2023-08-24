@@ -1,11 +1,11 @@
 /* Copyright 2020 Genemator Sakhib. All rights reserved. MPL-2.0 license. */
 
+import dompurify from "dompurify";
+import { marked, Renderer } from "marked";
 import React, { useEffect } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
-import marked, { Renderer } from "marked";
-import dompurify from "dompurify";
-import { RawCodeBlock } from "./CodeBlock";
 import { replaceEmojis } from "../util/emoji_util";
+import { RawCodeBlock } from "./CodeBlock";
 
 function slugify(text: string): string {
   text = text.toLowerCase();
@@ -66,7 +66,7 @@ function Markdown(props: MarkdownProps): React.ReactElement | null {
 
   try {
     marked.use({
-      renderer: ({
+      renderer: {
         heading(text: string, level: number) {
           const slug = slugify(text);
           return `
@@ -108,7 +108,7 @@ function Markdown(props: MarkdownProps): React.ReactElement | null {
             const original = a[1];
             const final = transformLinkUri(
               props.displayURL,
-              props.baseURL
+              props.baseURL,
             )(original);
             console.log(original, final);
             html = html.replace(`href="${original}"`, `href="${final}"`);
@@ -118,7 +118,7 @@ function Markdown(props: MarkdownProps): React.ReactElement | null {
         text(text) {
           return replaceEmojis(text);
         },
-      } as Partial<Renderer>) as any,
+      } as Partial<Renderer> as any,
     });
 
     const raw = marked(props.source, {
@@ -132,7 +132,7 @@ function Markdown(props: MarkdownProps): React.ReactElement | null {
             language={language as any}
             disablePrefixes={true}
             enableLineRef={false}
-          />
+          />,
         ),
     });
     return (

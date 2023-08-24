@@ -37,7 +37,7 @@ export class GithubEntry implements Entry {
   }
   async getDirectoryListing(
     path: string,
-    version?: string
+    version?: string,
   ): Promise<DirEntry[] | null> {
     try {
       const url = `https://api.github.com/repos/${this.owner}/${
@@ -55,7 +55,7 @@ export class GithubEntry implements Entry {
         throw Error(
           `Got an error (${
             res.status
-          }) while querying the GitHub API:\n${await res.text()}`
+          }) while querying the GitHub API:\n${await res.text()}`,
         );
       }
       const data = await res.json();
@@ -72,7 +72,7 @@ export class GithubEntry implements Entry {
     } catch (e) {
       if (e.toString().includes("Failed to fetch")) {
         throw Error(
-          "Querying the GitHub API failed. This is usually caused by a network outage or because you have reached your hourly API rate limit of 60 requests."
+          "Querying the GitHub API failed. This is usually caused by a network outage or because you have reached your hourly API rate limit of 60 requests.",
         );
       }
       throw e;
@@ -89,7 +89,7 @@ export class GithubEntry implements Entry {
       throw Error(
         `Got an error (${
           res.status
-        }) while querying the GitHub API:\n${await res.text()}`
+        }) while querying the GitHub API:\n${await res.text()}`,
       );
     }
     const data: any[] = await res.json();

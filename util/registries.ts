@@ -9,7 +9,7 @@ export interface Entry extends DatabaseEntry {
   getRepositoryURL(path: string, version?: string): string;
   getDirectoryListing(
     path: string,
-    version?: string
+    version?: string,
   ): Promise<DirEntry[] | null>;
   getVersionList(): Promise<string[] | null>;
   getDefaultVersion(): string;

@@ -32,7 +32,7 @@ export class NPMEntry implements Entry {
   }
   async getDirectoryListing(
     path: string,
-    version?: string
+    version?: string,
   ): Promise<DirEntry[] | null> {
     const url = `https://unpkg.com/${this.package_}@${version ?? "latest"}${
       this.path ?? ""
@@ -47,7 +47,7 @@ export class NPMEntry implements Entry {
       throw Error(
         `Got an error (${
           res.status
-        }) while querying unpkg:\n${await res.text()}`
+        }) while querying unpkg:\n${await res.text()}`,
       );
     }
     const data = await res.json();
@@ -77,7 +77,7 @@ export class NPMEntry implements Entry {
       throw Error(
         `Got an error (${
           res.status
-        }) while querying the NPM registry API:\n${await res.text()}`
+        }) while querying the NPM registry API:\n${await res.text()}`,
       );
     }
     const data = await res.json();

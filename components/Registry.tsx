@@ -23,26 +23,24 @@ const Registry = (): React.ReactElement => {
     const [name, version] = parseNameVersion(
       (Array.isArray(query.identifier)
         ? query.identifier[0]
-        : query.identifier) ?? ""
+        : query.identifier) ?? "",
     );
     return { name, version, path: path ? `/${path}` : "" };
   }, [query]);
 
   const canonicalPath = useMemo(
     () => `${isStd ? "" : "/x"}/${name}${version ? `@${version}` : ""}${path}`,
-    [name, version, path]
+    [name, version, path],
   );
   const entry = useMemo(() => findEntry(name), [name]);
-  const sourceURL = useMemo(() => entry?.getSourceURL(path, version), [
-    entry,
-    path,
-    version,
-  ]);
-  const repositoryURL = useMemo(() => entry?.getRepositoryURL(path, version), [
-    entry,
-    path,
-    version,
-  ]);
+  const sourceURL = useMemo(
+    () => entry?.getSourceURL(path, version),
+    [entry, path, version],
+  );
+  const repositoryURL = useMemo(
+    () => entry?.getRepositoryURL(path, version),
+    [entry, path, version],
+  );
   const defaultVersion = useMemo(() => entry?.getDefaultVersion(), [entry]);
 
   const [dirEntries, setDirEntries] = useState<
@@ -113,10 +111,10 @@ const Registry = (): React.ReactElement => {
       if (readmeEntry) {
         setReadmeCanonicalPath(canonicalPath + "/" + readmeEntry.name);
         setReadmeURL(
-          entry?.getSourceURL(path + "/" + readmeEntry.name, version)
+          entry?.getSourceURL(path + "/" + readmeEntry.name, version),
         );
         setReadmeRepositoryURL(
-          entry?.getRepositoryURL(path + "/" + readmeEntry.name, version)
+          entry?.getRepositoryURL(path + "/" + readmeEntry.name, version),
         );
         return;
       }
@@ -150,7 +148,7 @@ const Registry = (): React.ReactElement => {
       `${!isStd ? "/x" : ""}/[identifier]${path ? "/[...path]" : ""}`,
       `${!isStd ? "/x" : ""}/${
         name + (newVersion !== "" ? `@${newVersion}` : "")
-      }${path}`
+      }${path}`,
     ).then();
   }
 

@@ -123,7 +123,7 @@ export const RawCodeBlock = ({
                       i + 1
                     )}
                   </div>
-                )
+                ),
               )}
             </code>
           )}
@@ -140,7 +140,7 @@ export const RawCodeBlock = ({
                     .split("-")
                     .map((e) => /([\d]+)/.exec(e)![1])
                     .map((n) => parseInt(n, 10)),
-                  i + 1
+                  i + 1,
                 )
               ) {
                 lineProps.className = `${lineProps.className} highlight-line`;

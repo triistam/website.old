@@ -15,13 +15,13 @@ const testEntry = new GithubEntry(testDbEntry);
 
 test("source url", () => {
   expect(testEntry.getSourceURL("/index.js", "1.0")).toEqual(
-    "https://raw.githubusercontent.com/octocat/test-repo1/1.0/index.js"
+    "https://raw.githubusercontent.com/octocat/test-repo1/1.0/index.js",
   );
 });
 
 test("source url with default version", () => {
   expect(testEntry.getSourceURL("/index.js", undefined)).toEqual(
-    "https://raw.githubusercontent.com/octocat/test-repo1/master/index.js"
+    "https://raw.githubusercontent.com/octocat/test-repo1/master/index.js",
   );
 });
 
@@ -30,13 +30,13 @@ test("source url with custom default version", () => {
     new GithubEntry({
       ...testDbEntry,
       default_version: "custom",
-    }).getRepositoryURL("/index.js", undefined)
+    }).getRepositoryURL("/index.js", undefined),
   ).toEqual("https://github.com/octocat/test-repo1/tree/custom/index.js");
 });
 
 test("source url with empty path", () => {
   expect(testEntry.getSourceURL("", "1.0")).toEqual(
-    "https://raw.githubusercontent.com/octocat/test-repo1/1.0"
+    "https://raw.githubusercontent.com/octocat/test-repo1/1.0",
   );
 });
 
@@ -45,21 +45,21 @@ test("source url with subdirectory", () => {
     new GithubEntry({
       ...testDbEntry,
       path: "/test",
-    }).getSourceURL("/index.js", "1.0")
+    }).getSourceURL("/index.js", "1.0"),
   ).toEqual(
-    "https://raw.githubusercontent.com/octocat/test-repo1/1.0/test/index.js"
+    "https://raw.githubusercontent.com/octocat/test-repo1/1.0/test/index.js",
   );
 });
 
 test("repo url", () => {
   expect(testEntry.getRepositoryURL("/index.js", "1.0")).toEqual(
-    "https://github.com/octocat/test-repo1/tree/1.0/index.js"
+    "https://github.com/octocat/test-repo1/tree/1.0/index.js",
   );
 });
 
 test("repo url with default version", () => {
   expect(testEntry.getRepositoryURL("/index.js", undefined)).toEqual(
-    "https://github.com/octocat/test-repo1/tree/master/index.js"
+    "https://github.com/octocat/test-repo1/tree/master/index.js",
   );
 });
 
@@ -68,13 +68,13 @@ test("repo url with custom default version", () => {
     new GithubEntry({
       ...testDbEntry,
       default_version: "custom",
-    }).getRepositoryURL("/index.js", undefined)
+    }).getRepositoryURL("/index.js", undefined),
   ).toEqual("https://github.com/octocat/test-repo1/tree/custom/index.js");
 });
 
 test("repo url with empty path", () => {
   expect(testEntry.getRepositoryURL("", "1.0")).toEqual(
-    "https://github.com/octocat/test-repo1/tree/1.0"
+    "https://github.com/octocat/test-repo1/tree/1.0",
   );
 });
 
@@ -83,7 +83,7 @@ test("repo url with subdirectory", () => {
     new GithubEntry({
       ...testDbEntry,
       path: "/test",
-    }).getRepositoryURL("/index.js", "1.0")
+    }).getRepositoryURL("/index.js", "1.0"),
   ).toEqual("https://github.com/octocat/test-repo1/tree/1.0/test/index.js");
 });
 

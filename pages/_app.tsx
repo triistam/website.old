@@ -38,17 +38,19 @@ export default class GenoWebsiteApp extends App {
             <div className="pr-16 sm:text-center sm:px-16">
               <p className="font-medium text-black">
                 <span className="block sm:ml-2 sm:inline-block font-bold">
-                    <a href="https://uwussi.moe" className="text-black underline select-none">
-                      Hey, now I'm UwUssimo Robinson &rarr;
-                    </a>
+                  <a
+                    href="https://uwussi.moe"
+                    className="text-black underline select-none"
+                  >
+                    Hey, now I'm UwUssimo Robinson &rarr;
+                  </a>
                 </span>
               </p>
             </div>
           </div>
         </div>
 
-          <Component {...pageProps} />
-
+        <Component {...pageProps} />
       </div>
     );
   }

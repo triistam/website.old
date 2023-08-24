@@ -107,7 +107,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
         encoding: "utf8",
       });
       return { ...JSON.parse(file), id: name.replace(/\.json$/, "") };
-    })
+    }),
   );
   return {
     props: { posts },

@@ -62,7 +62,7 @@ test("database entries should be sorted alphabetically", () => {
 
 test("a database path (if any) should start with a trailing slash", () => {
   const invalidEntries = Object.entries(DATABASE).filter(
-    ([_, value]) => value["path"] !== undefined && !value["path"]
+    ([_, value]) => value["path"] !== undefined && !value["path"],
   );
   expect(invalidEntries).toEqual([]);
 });

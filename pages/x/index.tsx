@@ -20,10 +20,10 @@ const ThirdPartyRegistryList = (): React.ReactElement => {
             name.toLowerCase().includes(query.toLowerCase()) ||
             (entries[name].desc ?? "")
               .toLowerCase()
-              .includes(query.toLowerCase())
+              .includes(query.toLowerCase()),
         )
         .sort((nameA, nameB) => nameA.localeCompare(nameB)),
-    [entries, query]
+    [entries, query],
   );
 
   return (
