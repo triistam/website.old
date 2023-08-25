@@ -2,8 +2,7 @@
 
 import Link from "next/link";
 import Router from "next/router";
-import Highlight, { Prism } from "prism-react-renderer";
-import light from "prism-react-renderer/themes/ultramin";
+import { Highlight, Prism, themes } from "prism-react-renderer";
 import React, { useEffect, useLayoutEffect, useState } from "react";
 
 (typeof global !== "undefined" ? global : (window as any)).Prism = Prism;
@@ -87,8 +86,8 @@ export const RawCodeBlock = ({
 
   return (
     <Highlight
-      Prism={Prism}
-      theme={light}
+      prism={Prism}
+      theme={themes.ultramin}
       code={code}
       /* eslint-disable-next-line @typescript-eslint/ban-ts-comment */
       // @ts-ignore

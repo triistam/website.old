@@ -306,27 +306,28 @@ function Breadcrumbs({
   const segments = path.split("/").splice(1);
   return (
     <p className="text-white pt-2 pb-4">
-      <Link href="/">
-        <Link className="link">genemator.uz</Link>
-      </Link>{" "}
-      /{" "}
+      <Link href="/" className="link">
+        genemator.uz
+      </Link>
+      {" / "}
       {!isStd && (
         <>
-          <Link href="/x">
-            <Link className="link">x</Link>
-          </Link>{" "}
-          /{" "}
+          <Link href="/x" className="link">
+            x
+          </Link>
+          {" / "}
         </>
       )}
+
       <Link
         href={(!isStd ? "/x" : "") + "/[identifier]"}
         as={`${!isStd ? "/x" : ""}/${name}${version ? `@${version}` : ""}`}
+        className="link"
       >
-        <Link className="link">
-          {name}
-          {version ? `@${version}` : ""}
-        </Link>
+        {name}
+        {version ? `@${version}` : ""}
       </Link>
+
       {path &&
         path.length > 0 &&
         segments.map((p, i) => {
@@ -340,8 +341,9 @@ function Breadcrumbs({
                 as={`${!isStd ? "/x" : ""}/${name}${
                   version ? `@${version}` : ""
                 }${link ? `/${link}` : ""}`}
+                className="link"
               >
-                <Link className="link">{p}</Link>
+                {p}
               </Link>
             </React.Fragment>
           );
