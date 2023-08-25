@@ -60,8 +60,8 @@ const NewsPostPage = (props: Props): React.ReactElement => {
         </div>
       </div>
       <div className="max-w-screen-md mx-auto px-4 sm:px-6 md:px-8 py-8 mb-16">
-        <Link href="/posts">
-          <Link className="link">&lt;- Back to overview</Link>
+        <Link href="/posts" className="link">
+          &lt;- Back to overview
         </Link>
 
         <h1 className="telegram-title tracking-tight font-bold text-5xl leading-10 mt-4 py-8">
