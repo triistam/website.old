@@ -1,6 +1,7 @@
 /* Copyright 2020 Genemator Sakhib. All rights reserved. MPL-2.0 license. */
 
 import Head from "next/head";
+import Image from "next/image";
 import React from "react";
 import Typewriter from "typewriter-effect";
 import Footer from "../components/Footer";
@@ -20,7 +21,7 @@ export default function About(): React.ReactElement {
       <Header subtitle="About" />
       <div className="h-auto">
         <div className="flex flex-wrap justify-center items-center mb-8 mt-12">
-          <img
+          <Image
             src={"/avatar.jpg"}
             className="avatar h-auto sm:w-1/2 lg:1/2 xl:w-1/4 px-5 py-5"
             alt="Genemator's Logo"

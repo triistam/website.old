@@ -4,6 +4,7 @@ import Head from "next/head";
 import React from "react";
 
 import { promises as fs } from "fs";
+import Image from "next/image";
 import Link from "next/link";
 import { GetStaticPaths, GetStaticProps } from "next/types";
 import { join } from "path";
@@ -48,7 +49,7 @@ const NewsPostPage = (props: Props): React.ReactElement => {
       <div className="w-full" style={{ backgroundColor: "#2f2e2c" }}>
         <div className="max-w-screen-lg mx-auto">
           {props.meta.images.map((image, i) => (
-            <img
+            <Image
               key={i}
               src={image.image}
               alt=""

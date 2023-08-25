@@ -1,5 +1,6 @@
 /* Copyright 2020 Genemator Sakhib. All rights reserved. MPL-2.0 license. */
 
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { fileTypeFromURL, isReadme } from "../util/registry_utils";
@@ -102,7 +103,13 @@ function FileDisplay(props: {
               </div>
             );
           case "image":
-            return <img className="w-full" src={props.sourceURL} />;
+            return (
+              <Image
+                className="w-full"
+                src={props.sourceURL}
+                alt={props.sourceURL}
+              />
+            );
           default:
             return (
               <RawCodeBlock
