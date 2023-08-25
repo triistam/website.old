@@ -12,7 +12,6 @@
     "lint": "eslint --ext .js,.jsx,.ts,.tsx util/ pages/ components/"
   },
   "dependencies": {
-    "@tailwindcss/ui": "^0.7.2",
     "dompurify": "^3.0.5",
     "marked": "^7.0.4",
     "next": "^13.4.19",
@@ -32,7 +31,7 @@
     "@types/dompurify": "^3.0.2",
     "@types/jest": "^29.5.4",
     "@types/marked": "^5.0.1",
-    "@types/node": "^20.5.4",
+    "@types/node": "^20.5.6",
     "@types/nprogress": "^0.2.0",
     "@types/prismjs": "^1.26.0",
     "@types/react": "^18.2.21",
@@ -45,10 +44,10 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-react": "^7.33.2",
     "isomorphic-unfetch": "^4.0.2",
-    "jest": "^29.6.3",
+    "jest": "^29.6.4",
     "postcss-import": "^15.1.0",
     "prettier": "^3.0.2",
     "ts-jest": "^29.1.1",
-    "typescript": "^5.1.6"
+    "typescript": "^5.2.2"
   }
 }

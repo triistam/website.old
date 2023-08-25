@@ -1,6 +1,12 @@
 const defaultTheme = require("tailwindcss/defaultTheme"); // eslint-disable-line
 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
+  content: [
+    "./components/**/*.tsx",
+    "./pages/**/*.tsx",
+    "./public/posts/*.json",
+  ],
   theme: {
     fontFamily: {
       mono: [
@@ -25,13 +31,7 @@ module.exports = {
   variants: {
     backgroundColor: ["responsive", "hover", "focus", "active"],
   },
-  plugins: [require("@tailwindcss/ui"), require("tailwindcss-hyphens")],
-  purge: {
-    enabled: process.env.NODE_ENV === "production",
-    content: [
-      "./components/**/*.tsx",
-      "./pages/**/*.tsx",
-      "./public/posts/*.json",
-    ],
-  },
+  plugins: [
+    require("tailwindcss-hyphens")
+  ],
 };

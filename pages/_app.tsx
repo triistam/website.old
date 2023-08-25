@@ -4,9 +4,9 @@ import Link from "next/link";
 import Router from "next/router";
 import NProgress from "nprogress";
 import React from "react";
-// import "../components/app.css";
-// import "../components/markdown.css";
-// import "../components/ngprogress.css";
+import "../components/app.css";
+import "../components/markdown.css";
+import "../components/ngprogress.css";
 
 NProgress.configure({
   showSpinner: false,
