@@ -82,38 +82,40 @@ const ThirdPartyRegistryList = (): React.ReactElement => {
                     const link = `/x/${name}`;
                     return (
                       <li className={i !== 0 ? "border-t" : ""} key={i}>
-                        <Link href="/x/[identifier]" as={link}>
-                          <Link className="block hover:bg-white hover:text-black focus:outline-none focus:bg-white transition duration-150 ease-in-out">
-                            <div className="flex items-center px-4 sm:px-6 py-2">
-                              <div className="min-w-0 flex-1 flex items-center">
-                                <div className="min-w-0 flex-1">
-                                  <div className="text-sm leading-5 font-medium text-blue-500 truncate">
-                                    {name}
-                                  </div>
-                                  {entries[name]?.desc && (
-                                    <div className="mt-1 flex items-center text-sm leading-5">
-                                      <span className="truncate">
-                                        {entries[name]?.desc ?? ""}
-                                      </span>
-                                    </div>
-                                  )}
+                        <Link
+                          href="/x/[identifier]"
+                          as={link}
+                          className="block hover:bg-white hover:text-black focus:outline-none focus:bg-white transition duration-150 ease-in-out"
+                        >
+                          <div className="flex items-center px-4 sm:px-6 py-2">
+                            <div className="min-w-0 flex-1 flex items-center">
+                              <div className="min-w-0 flex-1">
+                                <div className="text-sm leading-5 font-medium text-blue-500 truncate">
+                                  {name}
                                 </div>
-                              </div>
-                              <div>
-                                <svg
-                                  className="h-5 w-5"
-                                  fill="currentColor"
-                                  viewBox="0 0 20 20"
-                                >
-                                  <path
-                                    fillRule="evenodd"
-                                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                    clipRule="evenodd"
-                                  />
-                                </svg>
+                                {entries[name]?.desc && (
+                                  <div className="mt-1 flex items-center text-sm leading-5">
+                                    <span className="truncate">
+                                      {entries[name]?.desc ?? ""}
+                                    </span>
+                                  </div>
+                                )}
                               </div>
                             </div>
-                          </Link>
+                            <div>
+                              <svg
+                                className="h-5 w-5"
+                                fill="currentColor"
+                                viewBox="0 0 20 20"
+                              >
+                                <path
+                                  fillRule="evenodd"
+                                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                  clipRule="evenodd"
+                                />
+                              </svg>
+                            </div>
+                          </div>
                         </Link>
                       </li>
                     );
