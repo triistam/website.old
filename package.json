@@ -28,6 +28,7 @@
     "typewriter-effect": "^2.20.1"
   },
   "devDependencies": {
+    "@next/eslint-plugin-next": "^13.4.19",
     "@types/dompurify": "^3.0.2",
     "@types/jest": "^29.5.4",
     "@types/marked": "^5.0.1",

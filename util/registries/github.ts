@@ -1,6 +1,6 @@
 /* Copyright 2020 Genemator Sakhib. All rights reserved. MPL-2.0 license. */
 
-import { Entry, DirEntry, DatabaseEntry } from "../registries";
+import { DatabaseEntry, DirEntry, Entry } from "../registries";
 
 export interface GithubDatabaseEntry extends DatabaseEntry {
   type: "github";
@@ -69,7 +69,7 @@ export class GithubEntry implements Entry {
         target: entry.target, // symlink only
       }));
       return files;
-    } catch (e) {
+    } catch (e: any) {
       if (e.toString().includes("Failed to fetch")) {
         throw Error(
           "Querying the GitHub API failed. This is usually caused by a network outage or because you have reached your hourly API rate limit of 60 requests.",
