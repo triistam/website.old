@@ -1,14 +1,14 @@
 /* Copyright 2020 Genemator Sakhib. All rights reserved. MPL-2.0 license. */
 
-import React from "react";
 import Head from "next/head";
 import { GetStaticProps } from "next/types";
+import React from "react";
 
 import { promises } from "fs";
 
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import { join } from "path";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 interface QuoteMeta {
   id: string;

@@ -21,7 +21,7 @@ export default function Custom404(): React.ReactElement {
       <Header subtitle="404" />
       <div className="h-auto">
         <div className="flex mb-4 justify-center mt-64">
-          <div className="text-white text-center text-center xl:text-6xl lg:text-5xl text-4xl border rounded hover:bg-white hover:text-black">
+          <div className="text-white text-center xl:text-6xl lg:text-5xl text-4xl border rounded hover:bg-white hover:text-black">
             404
           </div>
         </div>
@@ -31,7 +31,7 @@ export default function Custom404(): React.ReactElement {
             Stay stunned for new updates...
           </div>
         </div>
-        <div className="flex mb-4 justify-center mb-64">
+        <div className="flex justify-center mb-64">
           <Link
             onClick={() => Router.back()}
             href=""

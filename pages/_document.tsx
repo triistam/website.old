@@ -1,12 +1,12 @@
-import React from "react";
 import Document, {
-  Html,
-  Head,
-  Main,
-  NextScript,
   DocumentContext,
   DocumentInitialProps,
+  Head,
+  Html,
+  Main,
+  NextScript,
 } from "next/document";
+import React from "react";
 
 export default class GenoDocDocument extends Document {
   static async getInitialProps(

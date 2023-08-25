@@ -371,7 +371,7 @@ const Header = ({ subtitle }: { subtitle: string }): React.ReactElement => {
                     target="_blank"
                     rel="noreferrer"
                     href="https://desktop.genemator.uz"
-                    className="w-full genemator-title flex items-center justify-center px-4 py-2 border border text-base leading-6 font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-black focus:outline-none focus:border-white focus:shadow-outline-white active:bg-white transition ease-in-out duration-150"
+                    className="w-full genemator-title flex items-center justify-center px-4 py-2 border text-base leading-6 font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-black focus:outline-none focus:border-white focus:shadow-outline-white active:bg-white transition ease-in-out duration-150"
                   >
                     Desktop Station
                   </Link>

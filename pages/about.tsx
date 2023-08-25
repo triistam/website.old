@@ -1,10 +1,10 @@
 /* Copyright 2020 Genemator Sakhib. All rights reserved. MPL-2.0 license. */
 
-import React from "react";
 import Head from "next/head";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import React from "react";
 import Typewriter from "typewriter-effect";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 export default function About(): React.ReactElement {
   return (
@@ -276,7 +276,7 @@ export default function About(): React.ReactElement {
         <div className="m-8">
           <div
             className="coding inverse-toggle px-5 pt-4 shadow-lg text-white text-sm font-mono subpixel-antialiased
-              bg-black border pb-6 pt-4 rounded-lg leading-normal overflow-hidden"
+              bg-black border pb-6 rounded-lg leading-normal overflow-hidden"
           >
             <div className="top mb-2 flex">
               <div className="h-3 w-3 bg-red-500 rounded-full" />
