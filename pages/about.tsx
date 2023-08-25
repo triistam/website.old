@@ -6,6 +6,7 @@ import React from "react";
 import Typewriter from "typewriter-effect";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import avatar from "../public/avatar.jpg";
 
 export default function About(): React.ReactElement {
   return (
@@ -22,7 +23,7 @@ export default function About(): React.ReactElement {
       <div className="h-auto">
         <div className="flex flex-wrap justify-center items-center mb-8 mt-12">
           <Image
-            src={"/avatar.jpg"}
+            src={avatar}
             className="avatar h-auto sm:w-1/2 lg:1/2 xl:w-1/4 px-5 py-5"
             alt="Genemator's Logo"
           />
